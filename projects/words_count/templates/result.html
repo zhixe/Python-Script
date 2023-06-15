@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Word Count Result</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        .panel {
+            width: 750px;
+            height: 210px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .panel p {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .panel button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="panel">
+        <h2>Word Count Result</h2>
+        <p>Total Count: {{ total_alphabets }}</p>
+        <button onclick="location.href='/'">Exit</button>
+    </div>
+</body>
+</html>

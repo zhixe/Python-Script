@@ -9,6 +9,7 @@ __pycache__/
 # Virtual Environment
 .venv
 prj_venv
+projects
 
 # Configuration files
 *.cfg

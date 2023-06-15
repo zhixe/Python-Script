@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Word Count</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        .panel {
+            width: 750px;
+            height: 210px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .panel input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .panel button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="panel">
+        <h2>Word Count</h2>
+        <form action="/count" method="POST">
+            <label for="count_with_spaces">Count with spaces?</label>
+            <select name="count_with_spaces" id="count_with_spaces">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            <br><br>
+            <label for="word">Enter the word:</label>
+            <input type="text" name="word" id="word" required>
+            <br><br>
+            <button type="submit">Create Newline</button>
+        </form>
+    </div>
+</body>
+</html>

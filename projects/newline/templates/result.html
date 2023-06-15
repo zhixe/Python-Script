@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Newline Result</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        .panel {
+            width: 750px;
+            min-height: 210px;
+            max-height: 70vh;
+            border: 1px solid #ccc;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            overflow-y: auto;
+        }
+        .panel p {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .panel button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .panel textarea {
+            resize: vertical;
+            width: 350px;
+            min-height: 150px;
+            max-height: 70vh;
+        }
+    </style>
+    <script>
+        function copyToClipboard() {
+            // Get the textarea element
+            var textarea = document.getElementById('resultTextarea');
+
+            // Select the text inside the textarea
+            textarea.select();
+            textarea.setSelectionRange(0, 99999); // For mobile devices
+
+            // Copy the selected text to the clipboard
+            document.execCommand("copy");
+
+            // Alert the user
+            alert("Text copied to clipboard!");
+        }
+    </script>
+</head>
+<body>
+    <div class="panel">
+        <h2>Newline Result</h2>
+        <textarea id="resultTextarea" readonly>{{ word_with_newlines }}</textarea><br>
+        <button onclick="copyToClipboard()">Copy to Clipboard</button>
+        <button onclick="location.href='/'">Exit</button>
+    </div>
+</body>
+</html>
