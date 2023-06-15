@@ -12,7 +12,6 @@
         }
         .panel {
             width: 750px;
-            height: 210px;
             border: 1px solid #ccc;
             padding: 20px;
             display: flex;
@@ -20,10 +19,12 @@
             justify-content: space-between;
             align-items: center;
         }
+        .panel select,
         .panel input[type="text"] {
             width: 300px;
             padding: 10px;
             font-size: 16px;
+            margin-bottom: 10px;
         }
         .panel button {
             padding: 10px 20px;
@@ -32,6 +33,13 @@
             color: white;
             border: none;
             cursor: pointer;
+        }
+        .panel textarea {
+            width: 100%;
+            resize: vertical;
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -44,12 +52,25 @@
                 <option value="yes">Yes</option>
                 <option value="no">No</option>
             </select>
+            <br>
+            <label for="count_type">Count by:</label>
+            <select name="count_type" id="count_type">
+                <option value="row">Row (Line)</option>
+                <option value="column">Column (Field)</option>
+            </select>
             <br><br>
             <label for="word">Enter the word:</label>
-            <input type="text" name="word" id="word" required>
+            <br>
+            <textarea name="word" id="word" rows="6" required></textarea>
             <br><br>
-            <button type="submit">Create Newline</button>
+            <button type="submit">Count the Word</button>
         </form>
     </div>
 </body>
 </html>
+
+
+
+
+
+
