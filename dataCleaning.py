@@ -2,7 +2,7 @@ import pandas as pd
 
 def trim_header(filename):
     # Read the CSV file into a DataFrame
-    df = pd.read_csv(filename, nrows=0)
+    df = pd.read_csv(fullpath, nrows=0)
     
     # Trim whitespace, replace spaces/tabs with underscores, and convert to lowercase
     new_header = [col.strip().replace(' ', '_').replace('\t', '_').lower() for col in df.columns]
