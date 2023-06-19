@@ -1,0 +1,4 @@
+productID
+category
+subCategory
+productName

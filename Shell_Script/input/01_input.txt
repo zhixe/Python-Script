@@ -1,0 +1,4 @@
+                productID VARCHAR(25), 
+                category VARCHAR(50), 
+                subCategory VARCHAR(50), 
+                productName TEXT

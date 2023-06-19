@@ -1,0 +1,4 @@
+self.productID = "productID"
+self.category = "category"
+self.subCategory = "subCategory"
+self.productName = "productName"
